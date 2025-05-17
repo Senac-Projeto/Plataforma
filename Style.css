@@ -1,0 +1,412 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  background-color: white;
+}
+
+.options {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  gap: 25px;
+  margin: 20px 5%;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+}
+
+.opcoes {
+  position: relative;
+  text-decoration: none;
+  color: black;
+}
+
+.opcoes::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -2px;
+  background-color: blue;
+  transition: width 0.3s ease;
+}
+
+.opcoes:hover::after {
+  width: 100%;
+}
+
+#topo-do-site {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  margin: 70px;
+}
+
+.tituloone {
+  font-size: 50px;
+}
+
+.men {
+  font-size: 22px;
+}
+
+.primeira-imagem {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  animation: flutuar 3s ease-in-out infinite;
+}
+
+@keyframes flutuar {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+.imagemum {
+  width: 800px;
+  border-radius: 20px;
+}
+
+.duvidass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 70px;
+}
+
+.titulotwo {
+  font-size: 40px;
+}
+
+.items-image {
+  width: 350px;
+  border-radius: 15px;
+}
+
+.itemUm {
+  align-items: flex-start;
+  margin: 15px 5%;
+  gap: 30px;
+}
+
+/* ============================= */
+/* === ESTILOS DO CARROSSEL === */
+/* ============================= */
+
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-items {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+
+}
+
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.caption {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s;
+  z-index: 1;
+}
+
+.prev:hover,
+.next:hover {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.prev {
+  left: 15px;
+}
+
+.next {
+  right: 15px;
+}
+
+.carousel-indicators {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 6px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
+.duvids {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px;
+  flex-wrap: wrap;
+  background-color: #f9f9f9;
+}
+
+.duvida1 {
+  flex: 1 1 45%; /* Ajusta a largura da div */
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+  
+}
+
+.duvida1:hover{
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: scale(1.1);
+}
+
+.duvida1 img {
+  width: 100%;
+  max-width: 300px; /* Limita o tamanho da imagem */
+  height: auto;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.duvida1 h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.duvida1 p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.4;
+  margin-top: 0; /* Remove o espaço extra no topo */
+  margin-bottom: 0; /* Remove o espaço extra no final */
+}
+
+.duvida1 h3, .duvida1 p {
+  text-align: left; /* Alinha título e parágrafo à esquerda */
+  margin-left: 10px; /* Espaçamento à esquerda */
+  margin-right: 10px; /* Espaçamento à direita */
+}
+
+.titulotree{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  font-size: 40px;
+  margin-top: 35px;
+}
+
+/* Estilos gerais para a seção de depoimentos */
+.depoimentos {
+  display: flex; /* Para alinhar os depoimentos lado a lado */
+  justify-content: space-between; /* Cria espaçamento entre os depoimentos */
+  gap: 30px; /* Aumentei um pouco o gap entre os depoimentos */
+  padding: 40px 30px; /* Ajustei o padding para aumentar o espaçamento nas extremidades */
+  background-color: #f9f9f9; /* Fundo claro para a seção */
+  
+}
+
+/* Estilo para cada depoimento */
+.depoimento {
+  background-color: #fff; /* Fundo branco */
+  border: 1px solid #d3d3d3; /* Borda cinza claro */
+  border-radius: 8px; /* Diminui o border-radius */
+  padding: 15px; /* Reduzi o padding interno */
+  width: 30%; /* Faz com que os depoimentos ocupem 30% da largura */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  
+}
+
+.depoimento:hover{
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: scale(1.1);
+}
+
+/* Estilo do texto do comentário */
+.depoimento .comentario {
+  font-size: 14px; /* Diminui o tamanho do texto */
+  color: #333; /* Cor do texto do comentário */
+  line-height: 1.5; /* Espaçamento entre as linhas */
+  margin-bottom: 15px; /* Diminui a distância entre o comentário e a foto */
+}
+
+/* Estilo das imagens de perfil */
+.depoimento .perfil {
+  width: 60px; /* Reduzi o tamanho da imagem */
+  height: 60px; /* Reduzi a altura da imagem */
+  border-radius: 50%; /* Deixa a imagem redonda */
+  object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+  margin-bottom: 10px; /* Diminui a distância entre a imagem e o texto */
+}
+
+/* Estilo para a seção com o nome e status */
+.depoimento figure {
+  display: flex; /* Alinha a foto com o nome e status */
+  flex-direction: column; /* Faz com que fiquem na vertical */
+  align-items: center; /* Centraliza os itens */
+}
+
+/* Estilo do nome do usuário */
+.depoimento .name {
+  font-weight: bold; /* Deixa o nome em negrito */
+  font-size: 16px; /* Diminui um pouco o tamanho do nome */
+  color: #333; /* Cor do nome */
+  margin-bottom: 5px; /* Distância entre o nome e o status */
+}
+
+/* Estilo do status do usuário */
+.depoimento .status {
+  font-size: 12px; /* Diminui o tamanho do status */
+  color: #999; /* Cor cinza claro para o status */
+}
+
+.footer {
+  background-color: #fff; /* Cor de fundo do footer */
+  color: #bebdbd; /* Cor do texto */
+  text-align: center; /* Centraliza o texto */
+  padding: 40px 0; /* Espaçamento interno */
+  font-size: 14px; /* Tamanho da fonte */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  margin: 0; /* Remove a margem para deixar o texto mais compacto */
+}
+
+.infos {
+  text-align: center;
+  width: 100%;
+  max-width: 800px; /* mesma largura da imagem */
+  margin: 10px auto 0 auto; /* centraliza abaixo da imagem */
+  margin-top: 70px;
+  text-wrap: balance;
+}
+
+.listas{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  line-height: 2.0;
+  padding-left: 70px;
+  margin-top: 60px;
+
+  
+  
+}
+
+.produtos{
+  font-size: 35px;
+}
+
+.items{
+  font-size: 18px;
+}
+
+.titul{
+  margin-top: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.benefits-list {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+.benefit {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  line-height: 2.0;
+  padding-left: -15px;
+  margin-top: 90px;
+
+
+    }
+
+    .benefit i {
+      color: green;
+      font-size: 1.5rem;
+      margin-right: 12px;
+      margin-top: 4px;
+    }
+
+    .benefit-content h3 {
+      margin: 0;
+      font-size: 1.1rem;
+    }
+
+    .benefit-content p {
+      margin: 5px 0 0 0;
+      color: #444;
+    }
+
+    .expli{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-top: 30px;
+    }
